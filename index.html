@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Avinash Yadav</title>
+        <link rel="icon" type="image/jpg" href="img/logo.jpg">
+      
+        <link rel="stylesheet" href="css/my_css.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="screen" />
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 id="title">
+                    <span>Avinash </span>Yadav
+                </h1>
+                <ul id="menu" class="menu">
+
+                    <li>
+                        <a href="#" target="_blank">Developer</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Sketcher</a>
+                    </li>
+                </ul>
+            </header>
+            <ul class="icon-list">
+                <li class="facebook">
+                    <a target="_blank" href="https://www.facebook.com/avinash.yadav698">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a target="_blank" href="https://twitter.com/avinash___yadav">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="quora">
+                    <a target="_blank" href="https://www.quora.com/profile/Avinash-Yadav-273">
+                        <i class="fa fa-quora"></i>
+                    </a>
+                </li>
+		 
+                <li class="linkedin">
+                    <a target="_blank" href="https://www.linkedin.com/in/avinash-yadav-50b971146/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="email">
+                    <a target="_blank" href="mailto:avinashyadav06.ay@gmail.com">
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </li>
+                <li class="github">
+                    <a target="_blank" href="https://github.com/Weirdolucifer">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+               <li class="instagram">
+                    <a target="_blank" href="https://www.instagram.com/avinash____yadav/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="pinterest">
+                    <a target="_blank" href="https://www.pinterest.com/avinashyadav06ay/">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                </li>
+               
+            </ul>
+            <footer id="footer">
+			@designed by Avinash Yadav
+                
+            
+            </footer>
+        </main>
+        <div id="particles-js" class="background"></div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            var current_delay = 500;
+            $("#title").css("opacity", 0).animate({
+                opacity: 1
+            }, 1000);
+            $("#menu").css("opacity", 0).delay(current_delay).animate({
+                opacity: 1
+            }, 1000);
+            $(".icon-list li").delay(current_delay).each(function () {
+                current_delay += 100;
+                console.log(current_delay);
+                $(this).css({
+                    opacity: 0,
+                    top: "-20px"
+                }).delay(current_delay).animate({
+                    opacity: 1,
+                    top: 0
+                }, 100);
+            });
+            current_delay += 600;
+            $("#footer").delay(current_delay).css("opacity", 0).animate({
+                opacity: 1
+            }, 1000);
+            particlesJS.load('particles-js', 'particles.json', function() {
+                console.log('callback - particles-js config loaded');
+            });
+        });
+    </script>
+
+    
+    </body>
+
+    
+    
+</html>
