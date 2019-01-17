@@ -102,7 +102,9 @@ main .menu li:hover > a {
 main .menu li:first-child {
 	border: 0;
 }
-
+main .menu li:last-child {
+	border: 0;
+}
 main .menu li:hover:after {
 	width: 90%;
 }
