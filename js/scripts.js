@@ -18,3 +18,40 @@ toggleClose.addEventListener('click', function (e) {
   navMenu.classList.toggle('open');
 });
 
+const jobTitles = [
+  { title: "Sketcher", emoji: "🖌️" },
+  { title: "Astronomer", emoji: "🔭" },
+  { title: "Artist", emoji: "🎨" },
+];
+let currentIndex = 0;
+let currentText = "";
+let isDeleting = false;
+let typingSpeed = 100;
+
+function type() {
+  const title = document.getElementById("job-title");
+  const emoji = document.getElementById("emoji");
+  if (currentIndex >= jobTitles.length) {
+    currentIndex = 0;
+  }
+  const currentTitle = jobTitles[currentIndex].title;
+  const currentEmoji = jobTitles[currentIndex].emoji;
+  if (isDeleting) {
+    currentText = currentTitle.substring(0, currentText.length - 1);
+  } else {
+    currentText = currentTitle.substring(0, currentText.length + 1);
+  }
+  title.innerHTML = currentText;
+  emoji.innerHTML = currentEmoji;
+  if (!isDeleting && currentText === currentTitle) {
+    isDeleting = true;
+    typingSpeed = 300;
+  } else if (isDeleting && currentText === "") {
+    isDeleting = false;
+    currentIndex++;
+    typingSpeed = 100;
+  }
+  setTimeout(type, typingSpeed);
+}
+
+type();
