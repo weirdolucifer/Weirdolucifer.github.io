@@ -689,3 +689,24 @@ textarea:focus {
   text-decoration: none;
   color: #45bafc;
 }
+#job-title {
+  position: relative;
+  display: inline-block;
+}
+
+#job-title:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  height: 100%;
+  width: 3px;
+  background-color: white;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
