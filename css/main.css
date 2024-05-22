@@ -134,10 +134,6 @@ tbody > tr:last-child > td {
   margin-right: auto;
 }
 
-.small-container {
-  max-width: 650px;
-}
-
 @media screen and (min-width: 650px) {
   .container, .small-container,
   .small-container {
